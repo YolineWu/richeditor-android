@@ -28,7 +28,7 @@ ext {
   siteUrl = 'https://github.com/richeditor-android'
   gitUrl = 'https://github.com/richeditor-android.git'
   issueUrl = 'https://github.com/richeditor-android/issues'
-  libraryVersion = VERSION_NAME
+  libraryVersion = EDITOR_VERSION_NAME
   developerId = 'wasabeef'
   developerName = 'Wasabeef'
   developerEmail = 'dadadada.chop@gmail.com'
