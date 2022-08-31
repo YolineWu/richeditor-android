@@ -20,6 +20,7 @@ import android.webkit.WebViewClient;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
@@ -133,9 +134,10 @@ public class RichEditor extends WebView {
 
   private void stateCheck(String text) {
     String state = text.replaceFirst(STATE_SCHEME, "").toUpperCase(Locale.ENGLISH);
+    List<String> stateList = Arrays.asList(state.split(","));
     List<Type> types = new ArrayList<>();
     for (Type type : Type.values()) {
-      if (TextUtils.indexOf(state, type.name()) != -1) {
+      if (stateList.contains(type.name())) {
         types.add(type);
       }
     }
